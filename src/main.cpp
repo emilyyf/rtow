@@ -45,7 +45,7 @@ int main(void) {
 	const int32_t image_height = static_cast<int32_t>(image_width / aspect_ratio);
 	const int32_t samples_per_pixel = 100;
 	const int32_t max_depth = 50;
-	camera cam;
+	camera cam(point3(-2, 2, 1), point3(0, 0, -1), vec3(0, 1, 0), 20.0, aspect_ratio);
 	hittable_list world;
 	auto material_ground = std::make_shared<lambertian>(color(0.8, 0.8, 0.0));
 	auto material_center = std::make_shared<lambertian>(color(0.1, 0.2, 0.5));
